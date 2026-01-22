@@ -1,0 +1,594 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.logo h1:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, #ffd700);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.05)),
+                url('https://img.freepik.com/premium-vector/grill-house-restaurant_136321-546.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+    letter-spacing: 1px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== About Section ===== */
+.about {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-content {
+    color: white;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+}
+
+
+
+/* ===== Features Section ===== */
+.features {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.05));
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(255, 215, 0, 0.1));
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* ===== Menu Section ===== */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+}
+
+.menu-category h2 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.02));
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3), transparent);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.08));
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.menu-card:hover::before {
+    opacity: 1;
+}
+
+.menu-card h3 {
+    font-size: 1.4rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card .description {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card .price {
+    font-size: 1.3rem;
+    color: #ffd700;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Contact Section ===== */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.02));
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    border-color: #d4af37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.05));
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.info-card h3 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info-card a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.info-card a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.02));
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #d4af37;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #d4af37;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+    letter-spacing: 1px;
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ===== Reservation Section ===== */
+.reservation-section {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.05));
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+.reservation-section h2 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.reservation-section p {
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.reservation-btn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.reservation-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+    letter-spacing: 1px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #999;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 2px solid rgba(212, 175, 55, 0.3);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
