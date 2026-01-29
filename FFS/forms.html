@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Attributes Examples</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .section { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>HTML Input Attributes Examples</h1>
+
+    <!-- Basic Attributes -->
+    <div class="section">
+        <h2>Basic Attributes</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="john_doe" placeholder="Enter your username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
+
+    <!-- Validation Attributes -->
+    <div class="section">
+        <h2>Validation Attributes</h2>
+        <label for="email">Email (required, pattern):</label>
+        <input type="email" id="email" name="email" required placeholder="user@example.com">
+        <br><br>
+        <label for="age">Age (min-max):</label>
+        <input type="number" id="age" name="age" min="18" max="100" step="1">
+        <br><br>
+        <label for="website">Website (pattern):</label>
+        <input type="url" id="website" name="website" pattern="https?://.+" placeholder="https://example.com">
+        <br><br>
+        <label for="bio">Bio (maxlength):</label>
+        <input type="text" id="bio" name="bio" maxlength="100" placeholder="Max 100 characters">
+    </div>
+
+    <!-- Date & Time Attributes -->
+    <div class="section">
+        <h2>Date & Time Attributes</h2>
+        <label for="dob">Date of Birth (min-max):</label>
+        <input type="date" id="dob" name="dob" min="1950-01-01" max="2020-12-31">
+        <br><br>
+        <label for="meeting">Meeting Time (step):</label>
+        <input type="time" id="meeting" name="meeting" step="1800">
+        <br><br>
+        <label for="schedule">Schedule:</label>
+        <input type="datetime-local" id="schedule" name="schedule">
+    </div>
+
+    <!-- File Input -->
+    <div class="section">
+        <h2>File Input Attributes</h2>
+        <label for="document">Upload Document (multiple, accept):</label>
+        <input type="file" id="document" name="document" multiple accept=".pdf,.doc,.docx">
+        <br><br>
+        <label for="photo">Upload Photo (accept):</label>
+        <input type="file" id="photo" name="photo" accept="image/*" capture>
+    </div>
+
+    <!-- Radio & Checkbox -->
+    <div class="section">
+        <h2>Radio & Checkbox (checked attribute)</h2>
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+        <p>Interests:</p>
+        <input type="checkbox" id="sports" name="interests" value="sports" checked>
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label>
+    </div>
+
+    <!-- User Experience Attributes -->
+    <div class="section">
+        <h2>User Experience Attributes</h2>
+        <label for="country">Country (autocomplete):</label>
+        <input type="text" id="country" name="country" autocomplete="country-name">
+        <br><br>
+        <label for="phone">Phone (readonly):</label>
+        <input type="tel" id="phone" name="phone" value="+1-234-567-8900" readonly>
+        <br><br>
+        <label for="disabled-field">Disabled Field:</label>
+        <input type="text" id="disabled-field" name="disabled-field" value="Cannot edit" disabled>
+        <br><br>
+        <label for="search">Search (autofocus):</label>
+        <input type="search" id="search" name="search" autofocus placeholder="Search here...">
+    </div>
+
+    <!-- List Attribute (datalist) -->
+    <div class="section">
+        <h2>List Attribute with Datalist</h2>
+        <label for="browsers">Choose Browser (list):</label>
+        <input type="text" id="browsers" name="browsers" list="browser-list" placeholder="Type or select">
+        <datalist id="browser-list">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+        </datalist>
+    </div>
+
+    <!-- Range Input -->
+    <div class="section">
+        <h2>Range Input (min, max, step)</h2>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" step="5" value="50">
+        <span id="volume-value">50</span>
+    </div>
+
+    <!-- Color Input -->
+    <div class="section">
+        <h2>Color Input</h2>
+        <label for="favorite-color">Favorite Color:</label>
+        <input type="color" id="favorite-color" name="favorite-color" value="#ff0000">
+    </div>
+
+    <!-- Form Attributes -->
+    <div class="section">
+        <h2>Form Attributes</h2>
+        <form id="mainForm" action="/submit" method="POST" enctype="multipart/form-data">
+            <label for="street">Street Address (formaction):</label>
+            <input type="text" id="street" name="street" placeholder="Enter street">
+            <br><br>
+            <button type="submit">Submit to Form</button>
+            <button type="submit" formaction="/special-submit" formmethod="GET">Submit to Special Handler</button>
+            <button type="submit" formnovalidate>Submit Without Validation</button>
+        </form>
+    </div>
+
+    <!-- Accessibility Attributes -->
+    <div class="section">
+        <h2>Accessibility Attributes</h2>
+        <label for="accessible-input">Input with ARIA labels:</label>
+        <input type="text" id="accessible-input" name="accessible-input" 
+               aria-label="User input field" aria-describedby="input-help">
+        <small id="input-help">Please enter valid information</small>
+    </div>
+
+    <script>
+        // Update range value display
+        document.getElementById('volume').addEventListener('input', function() {
+            document.getElementById('volume-value').textContent = this.value;
+        });
+    </script>
+</body>
+</html>
