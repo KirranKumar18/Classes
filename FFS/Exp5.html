@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fibonacci(n) {
+            if (n <= 1) return n;
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+
+        function fibonacciIterative(n) {
+            if (n <= 1) return n;
+            let a = 0, b = 1;
+            for (let i = 2; i <= n; i++) {
+                [a, b] = [b, a + b];
+            }
+            return b;
+        }
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        function isEven(num){
+            return num%2===0;
+        }
+        var num=prompt("Enter a number to find its Fibonacci value:");
+        var sq = prompt("Enter a number to find its square:");
+        var prime = prompt("Enter a number to check if it's prime:");
+        var even = prompt("Enter a number to check if it's even:");
+        console.log("hello: ");
+
+        window.onload = function() {
+            let result = '';
+            for (let i = 0; i <= num; i++) {
+                result += `fibonacci(${i}) = ${fibonacciIterative(i)}<br>`;
+            }
+            document.body.innerHTML += `<h2>Fibonacci Sequence (0-${num}):</h2>${result}`;
+            document.body.innerHTML += `<h2>Square of ${sq} is ${sq * sq}</h2>`;
+            if (isPrime(prime)) {
+                document.body.innerHTML += `<h2>${prime} is a prime number.</h2>`;
+            } else {
+                document.body.innerHTML += `<h2>${prime} is not a prime number.</h2>`;
+            }
+             if(isEven(even))
+            document.body.innerHTML += `<h2>${even} is an even number.</h2>`;
+            else
+            document.body.innerHTML += `<h2>${even} is an odd number.</h2>`;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>JS</h1>
+</body>
+</html>
