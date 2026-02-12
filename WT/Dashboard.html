@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mapping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e7f3ff;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Mapping Example</h1>
+        
+        <img src="imgmapping.png" alt="Mapping Image" usemap="#imageMap">
+        
+        <map name="imageMap">
+            <area target="_blank" alt="resume" title="resume" href="resume.html" coords="24,2,1079,663" shape="rect">
+            <area target="_blank" alt="form" title="form" href="form.html" coords="1087,2,1999,1299" shape="rect">
+            <area target="_blank" alt="iframe" title="iframe" href="iframe.html" coords="24,721,1063,1368" shape="rect">
+        </map>
+        
+        <div class="info">
+            <p><strong>Instructions:</strong> Click on different areas of the image to navigate to different pages.</p>
+            <p><strong>Ready for coordinates:</strong> Provide the area coordinates and redirect links whenever you're ready!</p>
+        </div>
+    </div>
+</body>
+</html>

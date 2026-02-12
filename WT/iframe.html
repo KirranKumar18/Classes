@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrame Implementation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        iframe {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="up" behavior="alternate" scrollamount="1"> <h1>iFrame Examples </h1> </marquee>
+    
+    <!-- Example 1: Wikipedia Embed -->
+    <div class="container">
+        <h2>1. Wikipedia Page</h2>
+        <iframe 
+            src="https://en.wikipedia.org/wiki/HTML" 
+            width="100%" 
+            height="300" 
+            title="Wikipedia HTML">
+        </iframe>
+    </div>
+    
+    <!-- Example 2: CodePen Embed -->
+    <div class="container">
+        <h2>2. CodePen Example</h2>
+        <iframe 
+            height="300" 
+            style="width: 100%; border: 2px solid #ddd; border-radius: 5px;"
+            scrolling="no" 
+            title="Simple CSS Button" 
+            src="https://codepen.io/pen/preview/oNgwqYO" 
+            frameborder="no" 
+            loading="lazy" 
+            allowtransparency="true" 
+            allowfullscreen="true">
+        </iframe>
+    </div>
+    
+    <!-- Example 3: Another Local HTML File -->
+    <div class="container">
+        <h2>3. Local HTML File</h2>
+        <iframe 
+            src="welcome.html" 
+            width="100%" 
+            height="250" 
+            title="Welcome Page">
+        </iframe>
+    </div>
+    
+    <!-- Example 4: Map Embed -->
+    <div class="container">
+        <h2>4. Embedded Map</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.34!2d151.1628!3d-33.8568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3e7b3a0001%3A0x5017d681632b1a0!2sOperaHouse!5e0!3m2!1sen!2sau!4v1234567890" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+</body>
+</html>
