@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Linear",
+            "request": "launch",
+            "mainClass": "Linear",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "HeapSort",
+            "request": "launch",
+            "mainClass": "HeapSort",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "GFG",
+            "request": "launch",
+            "mainClass": "GFG",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
             "name": "PacketChecksum",
             "request": "launch",
             "mainClass": "PacketChecksum",
