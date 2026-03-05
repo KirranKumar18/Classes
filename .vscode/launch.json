@@ -6,6 +6,104 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Median",
+            "request": "launch",
+            "mainClass": "Leetcode.Median",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "arrTotal",
+            "request": "launch",
+            "mainClass": "arrTotal",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "tenone",
+            "request": "launch",
+            "mainClass": "tenone",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "ninetwo",
+            "request": "launch",
+            "mainClass": "ninetwo",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "nineone",
+            "request": "launch",
+            "mainClass": "nineone",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "prk",
+            "request": "launch",
+            "mainClass": "prk",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "rr",
+            "request": "launch",
+            "mainClass": "rr",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "rkh",
+            "request": "launch",
+            "mainClass": "rkh",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "rkr",
+            "request": "launch",
+            "mainClass": "rkr",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "r",
+            "request": "launch",
+            "mainClass": "r",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "k",
+            "request": "launch",
+            "mainClass": "k",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "rpk",
+            "request": "launch",
+            "mainClass": "rpk",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
+            "name": "Median",
+            "request": "launch",
+            "mainClass": "Median",
+            "projectName": "Classes_104747e4"
+        },
+        {
+            "type": "java",
             "name": "Linear",
             "request": "launch",
             "mainClass": "Linear",

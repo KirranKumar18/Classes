@@ -1,0 +1,16 @@
+1
+Familiarization of HTML and CSS
+
+2
+Expand the following html structure to include your own biodata. Use HTML5 tags and CSS
+to make it attractive.
+
+3 Show an interactive webpage using HTML5 and CSS3.
+
+4 Develop a Web Form using Bootstrap
+
+5
+A. Basic JavaScript Exercises
+B. Creating a Canvas Drawing Application with HTML5 and JavaScript
+
+6 JavaScript Exercises-Web Form

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas Example</title>
+<style>
+canvas {
+border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Canvas Example</h1>
+<p>Draw on the canvas by clicking and dragging the mouse</p>
+</header>
+<article>
+<h2>Canvas</h2>
+<canvas id="myCanvas" width="400" height="400" onmousedown="startDrawing(event)"
+onmousemove="drawLine(event)" onmouseup="stopDrawing(event)"></canvas>
+<div>
+<label>Line Color: <input type="color" id="lineColor" value="#000000"></label>
+<label>Thickness: <input type="range" id="lineWidth" min="1" max="20" value="2"></label>
+<button type="button" onclick="clearCanvas()">Clear Canvas</button>
+</div>
+</article>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var isDrawing = false;
+
+function startDrawing(event) {
+    isDrawing = true;
+    ctx.strokeStyle = document.getElementById("lineColor").value;
+    ctx.lineWidth = document.getElementById("lineWidth").value;
+    ctx.beginPath();
+    ctx.moveTo(event.offsetX, event.offsetY);
+}
+
+function drawLine(event) {
+    if (isDrawing) {
+        ctx.lineTo(event.offsetX, event.offsetY);
+        ctx.stroke();
+    }
+    }
+
+function stopDrawing(event) {
+    isDrawing = false;
+}
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+</script>
+</body> </html>
