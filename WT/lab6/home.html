@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Online Shopping Catalogue</title>
+
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            border: 1px solid #ccc;
+            width: 200px;
+            margin: 15px;
+            padding: 10px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        button {
+            padding: 8px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function addToCart() {
+            window.location = "order.html";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Online Shopping Catalogue</h1>
+
+    <div class="container">
+
+        <div class="item">
+            <h3>Headphones</h3>
+            <img src="https://via.placeholder.com/150" alt="Headphones" />
+            <p>High quality wireless headphones</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <h3>Smart Watch</h3>
+            <img src="https://via.placeholder.com/150" alt="Watch" />
+            <p>Track fitness and notifications</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <h3>Mobile Phone</h3>
+            <img src="https://via.placeholder.com/150" alt="Phone" />
+            <p>Latest smartphone with great camera</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <h3>Laptop</h3>
+            <img src="https://via.placeholder.com/150" alt="Laptop" />
+            <p>Powerful laptop for work and gaming</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <h3>Bluetooth Speaker</h3>
+            <img src="https://via.placeholder.com/150" alt="Speaker" />
+            <p>Loud and clear portable speaker</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
